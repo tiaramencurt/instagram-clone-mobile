@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import FeedScreen from './src/screens/FeedScreen';
-import DetailScreen from './src/screens/DetailScreen';
+import DetailScreen from './src/screens/Detail';
 import ProfileScreen from './src/screens/ProfileScreen';
 import { getCats } from './src/services/catApi';
 import { styles } from './App.styles';
