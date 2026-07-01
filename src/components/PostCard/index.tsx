@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, Pressable } from 'react-native';
-import { styles } from './PostItem.styles';
+import { styles } from './PostCard.styles';
 
 export default function PostItem({ post, onPress }: { post: any, onPress: () => void }) {
   const [liked, setLiked] = useState(false);
