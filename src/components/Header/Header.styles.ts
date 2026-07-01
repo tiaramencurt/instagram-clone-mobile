@@ -1,32 +1,31 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
-  header: {
-    height: 60,
-    backgroundColor: '#100A2C',
+  headerContainer: {
+    width: '100%',
+    height: 56,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: 16,
+    backgroundColor: '#000000',
     borderBottomWidth: 0.5,
-    borderBottomColor: 'rgba(255,255,255,0.1)',
+    borderBottomColor: '#1e1e1e',
+    paddingTop: Platform.OS === 'android' ? 4 : 0,
   },
-  logo: {
-    fontSize: 24,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-    letterSpacing: 1,
+  logoImage: {
+    width: 110,
+    height: 33,
+    resizeMode: 'contain',
+    tintColor: '#ffffff', // Asegura el logo en blanco absoluto sobre negro
   },
-  iconContainer: {
+  actionsContainer: {
     flexDirection: 'row',
-    gap: 15,
+    alignItems: 'center',
+    gap: 20, // Espaciado simétrico entre iconos de acción nativos
   },
-  icon: {
+  iconButton: {
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  iconText: {
-    fontSize: 20,
-    color: '#FFF',
   },
 });
