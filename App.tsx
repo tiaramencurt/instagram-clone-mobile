@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, SafeAreaView, StatusBar, TouchableOpacity, Text } from 'react-native';
 import { Foundation, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
-import Home from './screens/Home';
-import Detail from './screens/Detail';
-import Profile from './screens/Profile';
-import { type CatPost } from './services/catApi';
+import Home from './src/screens/Home';
+import Detail from './src/screens/Detail';
+import Profile from './src/screens/Profile';
+import { type CatPost } from './src/services/catApi';
 
 type ScreenView = 'home' | 'detail' | 'profile';
 
