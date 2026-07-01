@@ -2,37 +2,60 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingVertical: 12,
-    backgroundColor: '#0c002d',
-    borderBottomWidth: 0.5,
-    borderBottomColor: 'rgba(255,255,255,0.1)',
+    paddingVertical: 10,
+    borderBottomWidth: 0.3,
+    borderBottomColor: '#1e1e1e',
+    backgroundColor: '#000000',
   },
-  scroll: {
+  scrollContent: {
     paddingHorizontal: 12,
-    gap: 14,
-  },
-  storyWrapper: {
     alignItems: 'center',
+  },
+  storyItem: {
+    alignItems: 'center',
+    marginHorizontal: 6,
     width: 76,
   },
-  border: {
+  avatarContainer: {
     width: 68,
     height: 68,
     borderRadius: 34,
-    padding: 3,
-    backgroundColor: '#E1306C',
+    padding: 2.5, // Genera el borde sutil entre el gradiente y la foto
     justifyContent: 'center',
     alignItems: 'center',
   },
-  image: {
+  avatarImage: {
     width: '100%',
     height: '100%',
     borderRadius: 31,
-    backgroundColor: '#000',
+    borderWidth: 2,
+    borderColor: '#000000', // El "corte" negro clásico
   },
-  username: {
-    color: '#D7D7D7',
+  myStoryBadge: {
+    position: 'absolute',
+    bottom: 2,
+    right: 2,
+    backgroundColor: '#0095f6', // Azul oficial de interacción en Instagram
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: '#000000',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  myStoryText: {
+    color: '#ffffff',
+    fontSize: 12,
+    fontWeight: 'bold',
+    lineHeight: 14,
+    textAlign: 'center',
+  },
+  usernameText: {
+    color: '#ffffff',
     fontSize: 11,
     marginTop: 4,
+    width: '100%',
+    textAlign: 'center',
   },
 });
