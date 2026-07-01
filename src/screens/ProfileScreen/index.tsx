@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, FlatList, useWindowDimensions } from 'react-native';
-import user from '../../data/user';
+import user from '../../data/mockData';
 import { styles } from './ProfileScreen.styles';
 
 export default function ProfileScreen({ posts }: any) {
