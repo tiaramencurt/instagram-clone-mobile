@@ -1,54 +1,87 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
-  post: {
+  cardContainer: {
     width: '100%',
-    backgroundColor: '#05083c',
-    marginBottom: 16,
+    backgroundColor: '#000000',
+    marginBottom: 10,
   },
-  postTop: {
+  headerRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 12,
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  userInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 10,
   },
   avatar: {
     width: 32,
     height: 32,
     borderRadius: 16,
+    backgroundColor: '#1c1c1e',
   },
   username: {
-    color: '#FFF',
+    color: '#ffffff',
     fontSize: 13,
     fontWeight: '600',
   },
+  location: {
+    color: '#a8a8a8',
+    fontSize: 11,
+    marginTop: 1,
+  },
+  moreButton: {
+    paddingHorizontal: 4,
+  },
   postImage: {
-    width: '100%',
-    aspectRatio: 1,
+    width: width,
+    height: width, // Relación de aspecto perfecta 1:1 (Cuadrada de Instagram)
+    resizeMode: 'cover',
   },
-  postContent: {
-    padding: 12,
-  },
-  actions: {
+  actionsRow: {
     flexDirection: 'row',
-    marginBottom: 6,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 12,
   },
-  actionIcon: {
-    fontSize: 24,
+  leftIcons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
   },
-  likesCount: {
-    color: '#FFF',
-    fontWeight: 'bold',
+  footerContent: {
+    paddingHorizontal: 14,
+    paddingBottom: 4,
+  },
+  likesText: {
+    color: '#ffffff',
     fontSize: 13,
-    marginBottom: 4,
+    fontWeight: '700',
+    marginBottom: 5,
   },
-  caption: {
-    color: '#E1E1E1',
+  captionText: {
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 18,
   },
-  boldUser: {
-    fontWeight: 'bold',
-    color: '#FFF',
+  boldUsername: {
+    fontWeight: '700',
+  },
+  hashtagText: {
+    color: '#e0f1ff', // Tono azul sutil de hashtags en modo oscuro
+  },
+  timeAgo: {
+    color: '#737373',
+    fontSize: 11,
+    textTransform: 'uppercase',
+    marginTop: 6,
+    letterSpacing: 0.2,
   },
 });
