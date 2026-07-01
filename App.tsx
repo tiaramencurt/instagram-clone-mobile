@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import FeedScreen from './src/screens/FeedScreen';
 import DetailScreen from './src/screens/Detail';
-import ProfileScreen from './src/screens/ProfileScreen';
+import ProfileScreen from './src/screens/Profile';
 import { getCats } from './src/services/catApi';
 import { styles } from './App.styles';
 
