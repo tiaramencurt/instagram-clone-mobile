@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     width: 68,
     height: 68,
     borderRadius: 34,
-    padding: 2.5, // Genera el borde sutil entre el gradiente y la foto
+    padding: 2.5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -29,13 +29,13 @@ export const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 31,
     borderWidth: 2,
-    borderColor: '#000000', // El "corte" negro clásico
+    borderColor: '#000000',
   },
   myStoryBadge: {
     position: 'absolute',
     bottom: 2,
     right: 2,
-    backgroundColor: '#0095f6', // Azul oficial de interacción en Instagram
+    backgroundColor: '#0095f6',
     width: 20,
     height: 20,
     borderRadius: 10,

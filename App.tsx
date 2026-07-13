@@ -5,7 +5,7 @@ import Home from './src/screens/Home';
 import Detail from './src/screens/Detail';
 import Profile from './src/screens/Profile';
 import { type CatPost } from './src/services/catApi';
-import { styles } from './App.styles'; // Importamos la hoja de estilos unificada
+import { styles } from './App.styles';
 
 type ScreenView = 'home' | 'detail' | 'profile';
 

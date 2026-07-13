@@ -19,7 +19,6 @@ export default function StoryBar() {
           return (
             <TouchableOpacity style={styles.storyItem} activeOpacity={0.8}>
               {isMyStory ? (
-                // Tu historia no lleva gradiente rosa, lleva el badge de suma (+) azul
                 <View style={[styles.avatarContainer, { backgroundColor: 'transparent' }]}>
                   <Image source={{ uri: item.image }} style={styles.avatarImage} />
                   <View style={styles.myStoryBadge}>
@@ -27,7 +26,6 @@ export default function StoryBar() {
                   </View>
                 </View>
               ) : (
-                // Gradiente cromático oficial de las historias de Instagram
                 <LinearGradient
                   colors={['#c913b9', '#f9373f', '#fec053']}
                   start={{ x: 1, y: 0 }}

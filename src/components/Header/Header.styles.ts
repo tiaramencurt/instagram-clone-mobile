@@ -17,12 +17,12 @@ export const styles = StyleSheet.create({
     width: 110,
     height: 50,
     resizeMode: 'contain',
-    tintColor: '#ffffff', // Asegura el logo en blanco absoluto sobre negro
+    tintColor: '#ffffff',
   },
   actionsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 20, // Espaciado simétrico entre iconos de acción nativos
+    gap: 20,
   },
   iconButton: {
     justifyContent: 'center',

@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
   },
   postImage: {
     width: '100%',
-    aspectRatio: 1, // Mantiene la relación de aspecto perfecta 1:1 (cuadrada) en cualquier pantalla
+    aspectRatio: 1,
     resizeMode: 'cover',
   },
   actionsRow: {
@@ -75,7 +75,7 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
   hashtagText: {
-    color: '#e0f1ff', // Tono azul sutil de hashtags en modo oscuro
+    color: '#e0f1ff',
   },
   timeAgo: {
     color: '#737373',
