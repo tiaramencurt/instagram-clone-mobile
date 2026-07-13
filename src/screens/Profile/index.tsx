@@ -3,10 +3,15 @@ import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { currentUser } from '../../data/mockData';
 import { styles } from './Profile.styles';
+import { type CatPost } from '../../services/catApi';
 
-export default function Profile() {
+interface ProfileProps {
+  onNavigateToDetail: (post: CatPost) => void;
+}
+
+export default function Profile({ onNavigateToDetail }: ProfileProps) {
   // Generamos un set de fotos mockeadas simétricas
-  const userPosts = Array.from({ length: 15 }, (_, i) => ({
+  const userPosts: CatPost[] = Array.from({ length: 15 }, (_, i) => ({
     id: `p${i}`,
     url: `https://picsum.photos/300/300?random=${i + 20}`
   }));
@@ -78,7 +83,10 @@ export default function Profile() {
         ListHeaderComponent={renderProfileHeader}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
-          <TouchableOpacity activeOpacity={0.9}>
+          <TouchableOpacity 
+            activeOpacity={0.9} 
+            onPress={() => onNavigateToDetail(item)} // Llama al manejador global pasándole este post
+          >
             <Image source={{ uri: item.url }} style={styles.gridImage} />
           </TouchableOpacity>
         )}

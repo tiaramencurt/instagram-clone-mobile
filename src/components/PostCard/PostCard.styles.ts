@@ -40,8 +40,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   postImage: {
-    width: width,
-    height: width, // Relación de aspecto perfecta 1:1 (Cuadrada de Instagram)
+    width: '100%',
+    aspectRatio: 1, // Mantiene la relación de aspecto perfecta 1:1 (cuadrada) en cualquier pantalla
     resizeMode: 'cover',
   },
   actionsRow: {

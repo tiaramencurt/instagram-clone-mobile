@@ -31,7 +31,7 @@ export default function App() {
           <Home onNavigateToDetail={handleNavigateToDetail} />
         );
       case 'profile':
-        return <Profile />;
+        return <Profile onNavigateToDetail={handleNavigateToDetail} />;
       default:
         return <Home onNavigateToDetail={handleNavigateToDetail} />;
     }
