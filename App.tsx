@@ -1,3 +1,4 @@
+//hecho por la IA
 import React, { useState } from 'react';
 import { View, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native';
 import { Foundation, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
