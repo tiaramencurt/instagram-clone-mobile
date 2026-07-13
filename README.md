@@ -4,14 +4,14 @@ Este de repositorio contiene un clon móvil de alto realismo de la interfaz de u
 
 ---
 
-## 🌟 Referencia de Diseño (Figma)
+## Referencia de Diseño (Figma)
 El modelado visual, las dimensiones de layout, la iconografía y la distribución de componentes fueron tomados como base de las siguientes referencias de la comunidad de Figma:
 * [Instagram UI Kit (Figma Community)](https://www.figma.com/community/file/1004033523744290376)
 * [Instagram - UI Kit 2.0 (Figma Community)](https://www.figma.com/community/file/1341818988006002653)
 
 ---
 
-## 🛠️ Guía de Inicialización del Entorno
+## Guía de Inicialización del Entorno
 
 Siga estos pasos de manera secuencial dentro del directorio raíz del proyecto para inicializar la aplicación:
 
@@ -34,12 +34,12 @@ npx expo start --tunnel
 
 ---
 
-## 📂 Arquitectura de Archivos y Árbol de Directorios
+## Arquitectura de Archivos y Árbol de Directorios
 
 El proyecto organiza su estructura de código de manera modular y mantenible. A continuación se desglosa el árbol jerárquico bajo el directorio principal:
 
 ```text
-tiaramencurt-instagram-clone-mobile/
+instagram-clone-mobile/
 ├── app.json                  # Configuración global de metadatos de Expo
 ├── App.styles.ts             # Hoja de estilos global unificada para el contenedor raíz y TabBar
 ├── App.tsx                   # Punto de entrada principal y gestor de navegación del aplicativo
@@ -76,7 +76,7 @@ tiaramencurt-instagram-clone-mobile/
 
 ---
 
-## 🧬 Justificación de Componentes Atómicos y Props Heredadas
+## Justificación de Componentes Atómicos y Props Heredadas
 
 Para asegurar la modularidad, escalabilidad y reusabilidad del código según las buenas prácticas de React, el diseño se divide en piezas de interfaz especializadas:
 
@@ -106,7 +106,7 @@ Para asegurar la modularidad, escalabilidad y reusabilidad del código según la
 
 ---
 
-## 🧠 Declaración de Manejo de Estados y Hooks Utilizados
+## Declaración de Manejo de Estados y Hooks Utilizados
 
 La aplicación evita dependencias de librerías de navegación pesadas (como React Navigation) a través de una arquitectura de **Navegación Controlada por Estados**, lo cual minimiza la latencia en transiciones y optimiza el control del historial:
 
@@ -132,11 +132,3 @@ La aplicación evita dependencias de librerías de navegación pesadas (como Rea
 * **En `PostCard.tsx**`:
 * `liked` (`useState<boolean>`): Maneja el estado individual de "Me Gusta" de la publicación, cambiando el icono del corazón y sumando matemáticamente al contador de likes.
 * `saved` (`useState<boolean>`): Controla si el usuario seleccionó guardar de forma local la publicación actual en sus marcadores.
-
-
-
-```
-
-¡Mucha suerte con la entrega del TP! Te quedó de primera.
-
-```
