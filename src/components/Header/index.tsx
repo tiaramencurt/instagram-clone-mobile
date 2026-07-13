@@ -11,9 +11,9 @@ interface HeaderProps {
 export default function Header({ onNotificationsPress, onMessagesPress }: HeaderProps) {
   return (
     <View style={styles.headerContainer}>
-      {/* Logo tipográfico clásico de Instagram */}
+      {/* Logo tipográfico oficial en blanco/gris transparente */}
       <Image
-        source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' }}
+        source={{ uri: 'https://logos-marcas.com/wp-content/uploads/2020/04/Instagram-Logo.png' }}
         style={styles.logoImage}
       />
 

@@ -11,12 +11,19 @@ type ScreenView = 'home' | 'detail' | 'profile';
 export default function App() {
   // Estados de navegación local controlada
   const [currentScreen, setCurrentScreen] = useState<ScreenView>('home');
+  const [previousScreen, setPreviousScreen] = useState<ScreenView>('home'); // Guarda el historial
   const [selectedPost, setSelectedPost] = useState<CatPost | null>(null);
 
   // Manejador para ingresar a la vista extendida de un post
   const handleNavigateToDetail = (post: CatPost) => {
+    setPreviousScreen(currentScreen); // Recordamos si venía de 'home' o 'profile'
     setSelectedPost(post);
     setCurrentScreen('detail');
+  };
+
+  // Manejador para cambiar de pestañas principales en el TabBar
+  const handleTabPress = (screen: ScreenView) => {
+    setCurrentScreen(screen);
   };
 
   // Renderizador condicional de pantallas
@@ -26,7 +33,7 @@ export default function App() {
         return <Home onNavigateToDetail={handleNavigateToDetail} />;
       case 'detail':
         return selectedPost ? (
-          <Detail post={selectedPost} onBack={() => setCurrentScreen('home')} />
+          <Detail post={selectedPost} onBack={() => setCurrentScreen(previousScreen)} />
         ) : (
           <Home onNavigateToDetail={handleNavigateToDetail} />
         );
@@ -39,25 +46,23 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* StatusBar estilizada para alto contraste */}
       <StatusBar barStyle="light-content" backgroundColor="#000000" />
       
-      {/* Contenedor dinámico de pantallas */}
       <View style={styles.mainContent}>
         {renderScreen()}
       </View>
 
-      {/* TabBar Inferior Idéntica a Instagram Móvil */}
+      {/* TabBar Inferior */}
       <View style={styles.tabBar}>
         <TouchableOpacity 
           style={styles.tabButton} 
-          onPress={() => setCurrentScreen('home')}
+          onPress={() => handleTabPress('home')}
           activeOpacity={0.7}
         >
           <Foundation 
             name="home" 
             size={25} 
-            color={currentScreen === 'home' || currentScreen === 'detail' ? '#ffffff' : '#737373'} 
+            color={currentScreen === 'home' || (currentScreen === 'detail' && previousScreen === 'home') ? '#ffffff' : '#737373'} 
           />
         </TouchableOpacity>
 
@@ -75,13 +80,13 @@ export default function App() {
 
         <TouchableOpacity 
           style={styles.tabButton} 
-          onPress={() => setCurrentScreen('profile')}
+          onPress={() => handleTabPress('profile')}
           activeOpacity={0.7}
         >
           <Feather 
             name="user" 
             size={24} 
-            color={currentScreen === 'profile' ? '#ffffff' : '#737373'} 
+            color={currentScreen === 'profile' || (currentScreen === 'detail' && previousScreen === 'profile') ? '#ffffff' : '#737373'} 
           />
         </TouchableOpacity>
       </View>
@@ -92,13 +97,13 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#000000', // Previene parpadeos blancos en los extremos de la pantalla
+    backgroundColor: '#000000',
   },
   mainContent: {
     flex: 1,
   },
   tabBar: {
-    height: 49, // Altura estándar del TabNav de Instagram nativo
+    height: 49,
     flexDirection: 'row',
     backgroundColor: '#000000',
     borderTopWidth: 0.3,

@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   logoImage: {
     width: 110,
-    height: 33,
+    height: 50,
     resizeMode: 'contain',
     tintColor: '#ffffff', // Asegura el logo en blanco absoluto sobre negro
   },
